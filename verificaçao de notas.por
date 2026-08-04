@@ -1,20 +1,20 @@
 programa {
   funcao inicio() {
+    inteiro nota
     
-    real nota 
-    escreva("digite a nota (0-10)")
+    escreva("digite uma nota de 0 a 10:")
     leia(nota)
 
-    se(nota >=9.0) {
-      escreva("conceito A-Excelente!")
-    } senao se (nota>=7.0) {
-      escreva("conceito B-Bom")
-    } senao se (nota >=5.0) {
-     escreva("conceito C Regular")
-    } senao se (nota >=3.0){
-      escreva("conceito D-Insuficiente")
-    } senao {
-      escreva("conceito F-Reprovado")
+    //se o usuario digitar algo fora do intervalo, o laço inicia
+
+    enquanto (nota < 0 ou nota > 10) {
+
+    escreva("valor inválido! Digite novamente (0 a 10):")
+
+     leia(nota) // modifica a variavel para permitir a saida do laço
     }
-  }
+    
+     escreva("nota valida com sucesso:",nota)
+  
+  } 
 }
